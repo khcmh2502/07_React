@@ -10,7 +10,7 @@ createRoot(document.getElementById("root")).render(
   // 3. 오래된 API 사용 탐지
 
   // -> 실사용(프로덕션)에서는 아무런 영향을 주지 않음.
-  <StrictMode>
-    <App />
-  </StrictMode>
+  //<StrictMode>
+  <App />
+  //</StrictMode>
 );
