@@ -3,6 +3,7 @@ import Login from "./components/Login";
 import { AuthContext, AuthProvider } from "./components/AuthContext";
 import { useContext } from "react";
 import DashBoard from "./components/DashBoard";
+import { BrowserRouter } from "react-router-dom";
 
 // 컴포넌트 분리하여 하위 컴포넌트에서 useContext 이용하기
 function App() {
@@ -27,7 +28,14 @@ function AppComponent() {
     <>
       {user ? (
         <div className="body-container">
-          <DashBoard />
+          {/* BrowserRouter : React앱에서 URL 경로에 따라 
+            컴포넌트를 보여줄 수 있게 해주는 라우팅 컨테이너(최상위 부모 컴포넌트)
+            -> Route, Link, NavLink, useNavigate() 등 같은 라우팅 관련 기능을 사용하려면
+            모든 라우딩 요소들을 BrowserRouter 컴포넌트로 감싸야한다!!!
+          */}
+          <BrowserRouter>
+            <DashBoard />
+          </BrowserRouter>
         </div>
       ) : (
         <div className="login-section">

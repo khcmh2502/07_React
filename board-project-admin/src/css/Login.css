@@ -1,27 +1,39 @@
-.login-container {
-    width: 400px;
+.login-section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.login-container h2 {
-    text-align: center;
+.login-container {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.login-container h1 {
+  text-align: center;
+}
+
+.login-container button {
 }
 
 .form-group {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 input[type="email"],
 input[type="text"],
 input[type="password"] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
-
