@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#root {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin: -10px 0 10px 0;
+  text-align: center;
+}
+
+.link {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+.board-container {
+  padding: 2rem;
+  height: 100vh;
+  width: 800px;
+}
+
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.board-nav {
+  margin: 20px 0;
+}
+
+.board-nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.pagination a {
+  color: #333;
+}
+
+.pagination li.active a {
+  font-weight: bold;
+  color: royalblue;
+}
+
+.board-nav a.active {
+  font-weight: bold;
+  color: royalblue;
+}
+
+.board-list {
+  list-style: none;
+  padding: 0;
+}
+
+.board-item {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.board-item p {
+  display: -webkit-box; /* flexbox 대신 webkit-box를 씀 */
+  -webkit-line-clamp: 2; /* 최대 2줄 */
+  -webkit-box-orient: vertical; /* 박스 방향 세로 */
+  overflow: hidden; /* 넘치는 텍스트 숨기기 */
+  text-overflow: ellipsis; /* 말줄임표(...) 표시 */
+  white-space: normal; /* 줄바꿈 허용 */
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+  gap: 2rem;
+}
+
+.pagination .active {
+  font-weight: bold;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.photo-item img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 1rem;
+  color: gray;
+}
+
+.photo-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* 제목 */
+.photo-container h3 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+/* 격자 배치 */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* 각 사진 항목 */
+.photo-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.photo-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.photo-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* 사진 제목 */
+.photo-item p {
+  padding: 10px;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* 로딩 문구 */
+.loading {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.2rem;
+  color: #888;
+}

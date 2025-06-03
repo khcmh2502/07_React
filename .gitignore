@@ -1,6 +1,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/eclipse,react
 # Edit at https://www.toptal.com/developers/gitignore?templates=eclipse,react
 
+
+.env
+
 ### Eclipse ###
 .metadata
 bin/
