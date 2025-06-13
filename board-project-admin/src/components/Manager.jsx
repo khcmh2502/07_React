@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { axiosApi } from "./../api/axiosAPI";
 
 export default function Manager() {
-  const [accountList, setAccountList] = useState(null);
+  const [accountList, setAccountList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   // 이메일, 닉네임, 전화번호
   // 객체 하나로 상태 관리하는 방식
@@ -149,8 +149,12 @@ export default function Manager() {
               </thead>
 
               <tbody>
-                {accountList.length == 0 ? (
-                  <p>데이터가 없습니다</p>
+                {accountList.length === 0 ? (
+                  <tr>
+                    <td colSpan="4" style={{ textAlign: "center" }}>
+                      데이터가 없습니다
+                    </td>
+                  </tr>
                 ) : (
                   accountList.map((member) => (
                     <tr key={member.memberNo}>
