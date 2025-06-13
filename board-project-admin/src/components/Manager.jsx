@@ -70,18 +70,14 @@ export default function Manager() {
       }
     } catch (error) {
       console.error("관리자 계정 목록 조회 중 에러 발생 : ", error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   useEffect(() => {
     getAdminAccountList();
   }, []);
-
-  useEffect(() => {
-    if (accountList != null) {
-      setIsLoading(false);
-    }
-  }, [accountList]);
 
   return (
     <>
