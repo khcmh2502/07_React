@@ -149,14 +149,18 @@ export default function Manager() {
               </thead>
 
               <tbody>
-                {accountList?.map((member) => (
-                  <tr key={member.memberNo}>
-                    <td>{member.memberNo}</td>
-                    <td>{member.memberEmail}</td>
-                    <td>{member.memberNickname}</td>
-                    <td>{member.memberTel}</td>
-                  </tr>
-                ))}
+                {accountList.length == 0 ? (
+                  <p>데이터가 없습니다</p>
+                ) : (
+                  accountList.map((member) => (
+                    <tr key={member.memberNo}>
+                      <td>{member.memberNo}</td>
+                      <td>{member.memberEmail}</td>
+                      <td>{member.memberNickname}</td>
+                      <td>{member.memberTel}</td>
+                    </tr>
+                  ))
+                )}
               </tbody>
             </table>
           </section>
