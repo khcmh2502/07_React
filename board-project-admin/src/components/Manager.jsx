@@ -149,7 +149,7 @@ export default function Manager() {
               </thead>
 
               <tbody>
-                {accountList.map((member) => (
+                {accountList?.map((member) => (
                   <tr key={member.memberNo}>
                     <td>{member.memberNo}</td>
                     <td>{member.memberEmail}</td>
