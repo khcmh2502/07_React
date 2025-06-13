@@ -12,6 +12,15 @@ import {
 // npm install recharts
 
 function Chart() {
+  // useEffect -> 함수형 컴포넌트에서 생명주기를 다룰 수 있는 hook
+  /*
+  useEffect(() => {
+    // 컴포넌트가 화면에 마운트 되었을때, 업데이트가 일어날때 
+
+    return() // 클리어! chart컴포넌트가 화면상에서 삭제될때 
+  }, [data]) 
+  */
+
   const data = [
     // 오늘기준으로 일주일(7일내)의 데이터를 얻어옴
     {
@@ -82,7 +91,7 @@ function Chart() {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="date" />
           {/* x축의 기준이 되고 싶은 키 dataKey=date */}
-          <YAxis domain={[0, 100]} />
+          <YAxis domain={[0, 200]} />
           <Tooltip />
           <Area
             type="monotone"

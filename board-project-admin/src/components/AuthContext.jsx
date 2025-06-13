@@ -35,7 +35,7 @@ export const AuthProvider = ({ children }) => {
 
     // 비동기 로그인 요청 -> 서버로
     const response = await axios.post(
-      "http://localhost/admin/login",
+      "https://cmh-boardproject.store/admin/login",
       {
         memberEmail: email,
         memberPw: password,
@@ -82,7 +82,9 @@ export const AuthProvider = ({ children }) => {
   // 로그아웃 처리 함수
   const handleLogout = async () => {
     try {
-      const resp = await axios.get("http://localhost/admin/logout");
+      const resp = await axios.get(
+        "https://cmh-boardproject.store/admin/logout"
+      );
 
       console.log(resp);
 
